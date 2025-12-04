@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>DrYouu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: dark light;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #050816;
+      background: radial-gradient(circle at top, #1f2933 0, #020617 50%, #000 100%);
+      color: #e5e7eb;
+    }
+    .card {
+      max-width: 480px;
+      width: 90%;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.9);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      margin: 0 0 0.25rem;
+      font-size: 1.9rem;
+      letter-spacing: 0.04em;
+    }
+    h2 {
+      margin: 0 0 1.25rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+    p {
+      margin: 0 0 0.75rem;
+      line-height: 1.6;
+      font-size: 0.98rem;
+      color: #e5e7eb;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.75rem;
+      color: #cbd5f5;
+      margin-top: 0.75rem;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+    }
+    .links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .links a {
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: #e5e7eb;
+      transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+    }
+    .links a:hover {
+      background: rgba(148, 163, 184, 0.16);
+      border-color: #e5e7eb;
+      transform: translateY(-1px);
+    }
+    .footnote {
+      margin-top: 1.25rem;
+      font-size: 0.75rem;
+      color: #9ca3af;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h2>DRYOUU.UK</h2>
+    <h1>Yoel Ferreiro Naya</h1>
+    <p>
+      Laboratorio casero, redes, hardware raro y software a medida.
+      Aquí irá todo lo que vaya construyendo poco a poco.
+    </p>
+    <p>
+      De momento esta es solo una tarjeta de visita muy sencilla,
+      publicada desde GitHub y servida con tu dominio en Cloudflare.
+    </p>
+
+    <div class="tag">
+      <span class="dot"></span>
+      <span>En construcción permanente</span>
+    </div>
+
+    <div class="links">
+      <a href="mailto:yferreiro@gmail.com">Contacto</a>
+      <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+
+    <div class="footnote">
+      Puedes editar este archivo y subirlo de nuevo a GitHub cuando quieras.
+    </div>
+  </main>
+</body>
+</html>
