@@ -1,0 +1,86 @@
+{
+  "$schema": "./schemas/wiki-schema.json",
+  "wiki": {
+    "title": "Wiki Personal",
+    "description": "Base de conocimiento técnico y documentación",
+    "defaultArticle": "welcome",
+    "categories": [
+      {
+        "id": "getting-started",
+        "name": "Primeros Pasos",
+        "icon": "🚀",
+        "order": 1
+      },
+      {
+        "id": "infrastructure",
+        "name": "Infraestructura",
+        "icon": "🏗️",
+        "order": 2
+      },
+      {
+        "id": "security",
+        "name": "Seguridad",
+        "icon": "🔒",
+        "order": 3
+      },
+      {
+        "id": "development",
+        "name": "Desarrollo",
+        "icon": "💻",
+        "order": 4
+      },
+      {
+        "id": "tools",
+        "name": "Herramientas",
+        "icon": "🔧",
+        "order": 5
+      }
+    ],
+    "articles": [
+      {
+        "id": "welcome",
+        "title": "Bienvenido a la Wiki",
+        "category": "getting-started",
+        "author": "DrYouu",
+        "created": "2024-01-01",
+        "updated": "2024-01-01",
+        "tags": ["introducción", "guía"],
+        "featured": true,
+        "content": "# Bienvenido a Mi Wiki Personal\n\nEsta es tu base de conocimiento personal. Aquí puedes documentar:\n\n- Procedimientos técnicos\n- Configuraciones de sistemas\n- Notas de investigación\n- Soluciones a problemas\n- Y mucho más...\n\n## Cómo Usar Esta Wiki\n\n1. Navega por las categorías en el menú lateral\n2. Usa la búsqueda para encontrar artículos específicos\n3. Añade nuevos artículos editando `config/wiki.json`\n\n## Personalización\n\nPara añadir un nuevo artículo, edita el archivo `config/wiki.json` y añade un nuevo objeto en el array `articles`."
+      },
+      {
+        "id": "proxmox-setup",
+        "title": "Instalación y Configuración de Proxmox",
+        "category": "infrastructure",
+        "author": "DrYouu",
+        "created": "2024-01-15",
+        "updated": "2024-02-01",
+        "tags": ["proxmox", "virtualización", "homelab"],
+        "featured": true,
+        "content": "# Proxmox VE - Guía Completa\n\n## Instalación\n\n### Requisitos del Sistema\n- CPU: 64-bit con soporte de virtualización (Intel VT-x/AMD-V)\n- RAM: Mínimo 4GB (recomendado 8GB+)\n- Disco: Mínimo 32GB SSD\n\n### Pasos de Instalación\n\n1. **Descargar ISO**\n   ```bash\n   wget https://www.proxmox.com/en/downloads\n   ```\n\n2. **Crear USB Booteable**\n   ```bash\n   dd if=proxmox-ve_*.iso of=/dev/sdX bs=1M\n   ```\n\n3. **Instalar desde USB**\n   - Boot desde USB\n   - Seguir el instalador\n   - Configurar red e IP estática\n\n## Configuración Inicial\n\n### Actualizar Sistema\n```bash\napt update && apt upgrade -y\n```\n\n### Configurar Repositorios\nEditar `/etc/apt/sources.list.d/pve-enterprise.list`\n\n### Crear Pool de Storage\n```bash\npvesm add dir local-storage --path /mnt/storage\n```\n\n## Mejores Prácticas\n\n- Siempre usar IP estática\n- Configurar backups automáticos\n- Habilitar firewall\n- Crear snapshots antes de cambios importantes"
+      },
+      {
+        "id": "docker-basics",
+        "title": "Docker - Conceptos Básicos",
+        "category": "development",
+        "author": "DrYouu",
+        "created": "2024-02-10",
+        "updated": "2024-02-10",
+        "tags": ["docker", "contenedores", "devops"],
+        "featured": false,
+        "content": "# Docker - Guía Rápida\n\n## ¿Qué es Docker?\n\nDocker es una plataforma de contenedores que permite empaquetar aplicaciones con sus dependencias.\n\n## Comandos Esenciales\n\n### Gestión de Imágenes\n```bash\n# Listar imágenes\ndocker images\n\n# Descargar imagen\ndocker pull nginx\n\n# Eliminar imagen\ndocker rmi nginx\n```\n\n### Gestión de Contenedores\n```bash\n# Listar contenedores\ndocker ps -a\n\n# Ejecutar contenedor\ndocker run -d -p 80:80 nginx\n\n# Detener contenedor\ndocker stop container_id\n\n# Eliminar contenedor\ndocker rm container_id\n```\n\n## Docker Compose\n\nEjemplo de `docker-compose.yml`:\n\n```yaml\nversion: '3'\nservices:\n  web:\n    image: nginx\n    ports:\n      - \"80:80\"\n  db:\n    image: postgres\n    environment:\n      POSTGRES_PASSWORD: secret\n```"
+      },
+      {
+        "id": "security-hardening",
+        "title": "Hardening de Seguridad",
+        "category": "security",
+        "author": "DrYouu",
+        "created": "2024-03-01",
+        "updated": "2024-03-15",
+        "tags": ["seguridad", "hardening", "ssh"],
+        "featured": true,
+        "content": "# Hardening de Seguridad para Servidores\n\n## SSH Hardening\n\n### 1. Cambiar Puerto SSH\nEditar `/etc/ssh/sshd_config`:\n```bash\nPort 2222\n```\n\n### 2. Deshabilitar Login Root\n```bash\nPermitRootLogin no\n```\n\n### 3. Solo Autenticación por Clave\n```bash\nPasswordAuthentication no\nPubkeyAuthentication yes\n```\n\n### 4. Fail2ban\nInstalar y configurar:\n```bash\napt install fail2ban\nsystemctl enable fail2ban\n```\n\n## Firewall (UFW)\n\n```bash\n# Instalar UFW\napt install ufw\n\n# Políticas por defecto\nufw default deny incoming\nufw default allow outgoing\n\n# Permitir SSH\nufw allow 2222/tcp\n\n# Habilitar firewall\nufw enable\n```\n\n## Actualizaciones Automáticas\n\n```bash\napt install unattended-upgrades\ndpkg-reconfigure -plow unattended-upgrades\n```\n\n## Monitorización\n\n- Usar Fail2ban para detectar intrusiones\n- Revisar logs regularmente: `/var/log/auth.log`\n- Configurar alertas por email"
+      }
+    ]
+  }
+}

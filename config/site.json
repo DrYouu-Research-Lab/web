@@ -1,0 +1,153 @@
+{
+  "$schema": "./schemas/site-schema.json",
+  "site": {
+    "name": "DrYouu",
+    "fullName": "DrYouu - Laboratorio de Investigación y Desarrollo",
+    "author": "Yoel Ferreiro Naya",
+    "domain": "dryouu.uk",
+    "description": "Laboratorio casero, redes, hardware y software a medida. Investigación y desarrollo tecnológico.",
+    "keywords": ["DrYouu", "tecnología", "hardware", "software", "redes", "laboratorio"],
+    "language": "es",
+    "footer": {
+      "copyright": "2024 DrYouu. Todos los derechos reservados.",
+      "tagline": "Laboratorio de investigación y desarrollo tecnológico."
+    }
+  },
+  "branding": {
+    "logo": {
+      "text": "DRYOUU",
+      "url": "/index.html"
+    },
+    "favicon": "/assets/images/favicon.ico"
+  },
+  "navigation": {
+    "public": [
+      {
+        "id": "home",
+        "label": "Inicio",
+        "url": "/index.html",
+        "icon": "🏠"
+      },
+      {
+        "id": "about",
+        "label": "Sobre Mí",
+        "url": "/public/about.html",
+        "icon": "👤"
+      },
+      {
+        "id": "projects",
+        "label": "Proyectos",
+        "url": "/public/projects.html",
+        "icon": "💼"
+      },
+      {
+        "id": "contact",
+        "label": "Contacto",
+        "url": "/public/contact.html",
+        "icon": "✉️"
+      }
+    ],
+    "private": [
+      {
+        "id": "dashboard",
+        "label": "Dashboard",
+        "url": "/private/dashboard.html",
+        "icon": "📊"
+      },
+      {
+        "id": "wiki",
+        "label": "Wiki",
+        "url": "/private/wiki.html",
+        "icon": "📚"
+      },
+      {
+        "id": "links",
+        "label": "Enlaces",
+        "url": "/private/links.html",
+        "icon": "🔗"
+      }
+    ],
+    "footer": [
+      {
+        "section": "Navegación",
+        "links": [
+          { "label": "Inicio", "url": "/index.html" },
+          { "label": "Sobre Mí", "url": "/public/about.html" },
+          { "label": "Proyectos", "url": "/public/projects.html" },
+          { "label": "Contacto", "url": "/public/contact.html" }
+        ]
+      },
+      {
+        "section": "Recursos",
+        "links": [
+          { "label": "Documentación", "url": "/docs/README.html" },
+          { "label": "Acceso Privado", "url": "/public/login.html" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "email": "yferreiro@gmail.com",
+    "social": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/DrYouu-Research-Lab",
+        "icon": "GH",
+        "display": true
+      },
+      {
+        "name": "Email",
+        "url": "mailto:yferreiro@gmail.com",
+        "icon": "✉",
+        "display": true
+      }
+    ]
+  },
+  "hero": {
+    "subtitle": "DRYOUU.UK",
+    "title": "Yoel Ferreiro Naya",
+    "description": "Laboratorio casero de investigación y desarrollo. Explorando hardware, redes, software a medida y tecnologías emergentes. Un espacio donde la curiosidad se encuentra con la innovación.",
+    "status": {
+      "text": "En construcción permanente",
+      "show": true
+    },
+    "cta": [
+      {
+        "label": "Conoce Más",
+        "url": "/public/about.html",
+        "style": "primary"
+      },
+      {
+        "label": "Ver Proyectos",
+        "url": "/public/projects.html",
+        "style": "secondary"
+      }
+    ]
+  },
+  "features": [
+    {
+      "icon": "🔬",
+      "title": "Laboratorio Casero",
+      "description": "Experimentación con hardware, servidores, y arquitecturas de red. Construcción y prueba de prototipos tecnológicos."
+    },
+    {
+      "icon": "🌐",
+      "title": "Redes & Infraestructura",
+      "description": "Diseño e implementación de soluciones de red avanzadas. Seguridad, monitorización y optimización de infraestructuras."
+    },
+    {
+      "icon": "💻",
+      "title": "Software a Medida",
+      "description": "Desarrollo de aplicaciones personalizadas y herramientas especializadas. Automatización y soluciones tecnológicas innovadoras."
+    }
+  ],
+  "theme": {
+    "colors": {
+      "primary": "#3b82f6",
+      "secondary": "#10b981",
+      "accent": "#f59e0b",
+      "danger": "#ef4444"
+    },
+    "mode": "dark"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "./schemas/projects-schema.json",
+  "projects": [
+    {
+      "id": "homelab",
+      "title": "HomeLab Infrastructure",
+      "category": "infrastructure",
+      "status": "active",
+      "featured": true,
+      "shortDescription": "Infraestructura de laboratorio casero con servidores, almacenamiento y virtualización.",
+      "description": "Diseño e implementación de un laboratorio casero completo con múltiples servidores, sistemas de almacenamiento redundante, y plataformas de virtualización. Incluye monitorización, automatización y gestión centralizada.",
+      "technologies": ["Proxmox", "Docker", "Kubernetes", "TrueNAS", "pfSense"],
+      "image": "/assets/images/projects/homelab.jpg",
+      "links": [
+        {
+          "label": "Documentación",
+          "url": "#",
+          "type": "docs"
+        }
+      ],
+      "startDate": "2023-01",
+      "endDate": null,
+      "highlights": [
+        "Virtualización con Proxmox VE",
+        "Cluster Kubernetes para microservicios",
+        "Sistema de backup automatizado",
+        "Monitorización con Prometheus y Grafana"
+      ]
+    },
+    {
+      "id": "network-security",
+      "title": "Soluciones de Seguridad de Red",
+      "category": "security",
+      "status": "active",
+      "featured": true,
+      "shortDescription": "Implementación de seguridad avanzada en redes empresariales y domésticas.",
+      "description": "Desarrollo de soluciones de seguridad de red incluyendo firewall, IDS/IPS, VPN, y gestión de amenazas. Foco en prevención de intrusiones y protección de datos.",
+      "technologies": ["pfSense", "Suricata", "WireGuard", "OpenVPN", "Fail2ban"],
+      "image": "/assets/images/projects/security.jpg",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/DrYouu-Research-Lab",
+          "type": "github"
+        }
+      ],
+      "startDate": "2023-06",
+      "endDate": null,
+      "highlights": [
+        "IDS/IPS con Suricata",
+        "VPN segura con WireGuard",
+        "Análisis de tráfico en tiempo real",
+        "Sistema de alertas automático"
+      ]
+    },
+    {
+      "id": "automation-tools",
+      "title": "Herramientas de Automatización",
+      "category": "software",
+      "status": "active",
+      "featured": false,
+      "shortDescription": "Scripts y herramientas para automatizar tareas de administración de sistemas.",
+      "description": "Colección de scripts y aplicaciones para automatizar tareas comunes de administración de sistemas, backups, monitorización y despliegue de servicios.",
+      "technologies": ["Python", "Bash", "Ansible", "Jenkins", "GitLab CI"],
+      "image": "/assets/images/projects/automation.jpg",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/DrYouu-Research-Lab",
+          "type": "github"
+        }
+      ],
+      "startDate": "2022-09",
+      "endDate": null,
+      "highlights": [
+        "Scripts de backup automáticos",
+        "Monitorización de servicios",
+        "Despliegue automatizado con Ansible",
+        "Pipeline CI/CD"
+      ]
+    },
+    {
+      "id": "media-server",
+      "title": "Servidor Multimedia Personal",
+      "category": "media",
+      "status": "completed",
+      "featured": false,
+      "shortDescription": "Servidor multimedia completo con streaming y gestión de contenidos.",
+      "description": "Implementación de un servidor multimedia personal con Plex/Jellyfin, sistema de descargas automatizadas, y transcodificación por hardware.",
+      "technologies": ["Plex", "Jellyfin", "Radarr", "Sonarr", "Nginx"],
+      "image": "/assets/images/projects/media.jpg",
+      "links": [],
+      "startDate": "2022-03",
+      "endDate": "2023-12",
+      "highlights": [
+        "Streaming 4K con transcodificación",
+        "Gestión automática de contenidos",
+        "Acceso remoto seguro",
+        "Apps móviles integradas"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "infrastructure",
+      "name": "Infraestructura",
+      "icon": "🏗️",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "security",
+      "name": "Seguridad",
+      "icon": "🔒",
+      "color": "#ef4444"
+    },
+    {
+      "id": "software",
+      "name": "Software",
+      "icon": "💻",
+      "color": "#10b981"
+    },
+    {
+      "id": "media",
+      "name": "Multimedia",
+      "icon": "🎬",
+      "color": "#f59e0b"
+    }
+  ]
+}

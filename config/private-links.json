@@ -1,0 +1,182 @@
+{
+  "$schema": "./schemas/private-links-schema.json",
+  "categories": [
+    {
+      "id": "services",
+      "name": "Servicios",
+      "icon": "🌐",
+      "order": 1,
+      "links": [
+        {
+          "id": "proxmox",
+          "title": "Proxmox VE",
+          "description": "Panel de gestión de virtualización",
+          "url": "https://proxmox.local:8006",
+          "icon": "🖥️",
+          "color": "#e57000",
+          "newTab": true,
+          "requiresVPN": true
+        },
+        {
+          "id": "truenas",
+          "title": "TrueNAS",
+          "description": "Sistema de almacenamiento",
+          "url": "https://truenas.local",
+          "icon": "💾",
+          "color": "#0095d5",
+          "newTab": true,
+          "requiresVPN": true
+        },
+        {
+          "id": "pfsense",
+          "title": "pfSense",
+          "description": "Firewall y router",
+          "url": "https://pfsense.local",
+          "icon": "🛡️",
+          "color": "#212121",
+          "newTab": true,
+          "requiresVPN": true
+        }
+      ]
+    },
+    {
+      "id": "monitoring",
+      "name": "Monitorización",
+      "icon": "📊",
+      "order": 2,
+      "links": [
+        {
+          "id": "grafana",
+          "title": "Grafana",
+          "description": "Dashboards y visualización",
+          "url": "https://grafana.local",
+          "icon": "📈",
+          "color": "#f46800",
+          "newTab": true,
+          "requiresVPN": true
+        },
+        {
+          "id": "prometheus",
+          "title": "Prometheus",
+          "description": "Métricas y alertas",
+          "url": "https://prometheus.local",
+          "icon": "🔥",
+          "color": "#e6522c",
+          "newTab": true,
+          "requiresVPN": true
+        },
+        {
+          "id": "uptime-kuma",
+          "title": "Uptime Kuma",
+          "description": "Monitor de servicios",
+          "url": "https://uptime.local",
+          "icon": "⏱️",
+          "color": "#5cdd8b",
+          "newTab": true,
+          "requiresVPN": false
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "name": "Multimedia",
+      "icon": "🎬",
+      "order": 3,
+      "links": [
+        {
+          "id": "plex",
+          "title": "Plex",
+          "description": "Servidor multimedia",
+          "url": "https://plex.local",
+          "icon": "🎥",
+          "color": "#e5a00d",
+          "newTab": true,
+          "requiresVPN": false
+        },
+        {
+          "id": "jellyfin",
+          "title": "Jellyfin",
+          "description": "Alternativa a Plex",
+          "url": "https://jellyfin.local",
+          "icon": "🍿",
+          "color": "#00a4dc",
+          "newTab": true,
+          "requiresVPN": false
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Herramientas",
+      "icon": "🔧",
+      "order": 4,
+      "links": [
+        {
+          "id": "portainer",
+          "title": "Portainer",
+          "description": "Gestión de contenedores Docker",
+          "url": "https://portainer.local",
+          "icon": "🐳",
+          "color": "#13bef9",
+          "newTab": true,
+          "requiresVPN": true
+        },
+        {
+          "id": "gitlab",
+          "title": "GitLab",
+          "description": "Repositorios y CI/CD",
+          "url": "https://gitlab.local",
+          "icon": "🦊",
+          "color": "#fc6d26",
+          "newTab": true,
+          "requiresVPN": true
+        },
+        {
+          "id": "vault",
+          "title": "Vault",
+          "description": "Gestión de secretos",
+          "url": "https://vault.local",
+          "icon": "🔐",
+          "color": "#000000",
+          "newTab": true,
+          "requiresVPN": true
+        }
+      ]
+    },
+    {
+      "id": "external",
+      "name": "Externos",
+      "icon": "🌍",
+      "order": 5,
+      "links": [
+        {
+          "id": "github",
+          "title": "GitHub",
+          "description": "Repositorios públicos",
+          "url": "https://github.com/DrYouu-Research-Lab",
+          "icon": "⚫",
+          "color": "#181717",
+          "newTab": true,
+          "requiresVPN": false
+        },
+        {
+          "id": "cloudflare",
+          "title": "Cloudflare",
+          "description": "DNS y CDN",
+          "url": "https://dash.cloudflare.com",
+          "icon": "☁️",
+          "color": "#f38020",
+          "newTab": true,
+          "requiresVPN": false
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "showIcons": true,
+    "showDescriptions": true,
+    "groupByCategory": true,
+    "defaultNewTab": true,
+    "showVPNIndicator": true
+  }
+}
