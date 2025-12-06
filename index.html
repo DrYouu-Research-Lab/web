@@ -1,170 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DrYouu - Laboratorio casero, redes, hardware y software a medida. Investigación y desarrollo tecnológico.">
-  <meta name="keywords" content="DrYouu, tecnología, hardware, software, redes, laboratorio">
-  <meta name="author" content="Yoel Ferreiro Naya">
-  
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  
-  <!-- Title -->
-  <title>DrYouu - Laboratorio de Investigación y Desarrollo</title>
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <meta charset="UTF-8" />
+    <title>DrYouu · Laboratorio personal de investigación, reparación y experimentación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Laboratorio personal de Yoel Ferreiro Naya: tecnología, homelab, automoción, tanatopraxia, fabricación digital e investigación. Un espacio donde las piezas encajan aunque no pertenezcan al mismo puzzle." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="/index.html" class="nav-brand">DRYOUU</a>
-      
-      <ul class="nav-menu">
-        <li><a href="/index.html" class="nav-link active">Inicio</a></li>
-        <li><a href="/public/about.html" class="nav-link">Sobre Mí</a></li>
-        <li><a href="/public/projects.html" class="nav-link">Proyectos</a></li>
-        <li><a href="/public/contact.html" class="nav-link">Contacto</a></li>
-        <li><a href="/public/login.html" class="nav-link btn-primary" style="padding: 0.5rem 1rem;">Acceso Privado</a></li>
-      </ul>
-      
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <!-- CABECERA / NAVEGACIÓN -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">DRYOUU</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="public/about.html">Sobre Mí</a></li>
+                    <li><a href="public/projects.html">Proyectos</a></li>
+                    <li><a href="public/contact.html">Contacto</a></li>
+                    <li><a href="public/login.html">Acceso Privado</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2 class="hero-subtitle">DRYOUU.UK</h2>
-      <h1 class="hero-title">Yoel Ferreiro Naya</h1>
-      <p class="hero-description">
-        Laboratorio casero de investigación y desarrollo. 
-        Explorando hardware, redes, software a medida y tecnologías emergentes.
-        Un espacio donde la curiosidad se encuentra con la innovación.
-      </p>
-      
-      <div class="hero-buttons">
-        <a href="/public/about.html" class="btn btn-primary">Conoce Más</a>
-        <a href="/public/projects.html" class="btn btn-secondary">Ver Proyectos</a>
-      </div>
-      
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        <span>En construcción permanente</span>
-      </div>
-    </div>
-  </section>
+    <!-- HERO PRINCIPAL -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <p class="hero-kicker">DRYOUU.UK</p>
+                    <h1>Yoel Ferreiro Naya</h1>
+                    <p class="hero-subtitle">
+                        Laboratorio personal de investigación, creación y reparación.
+                        Tecnología, tanatopraxia, automoción, fabricación digital, escritura
+                        y proyectos que no encajan en una sola etiqueta.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="public/about.html" class="btn btn-primary">Conoce más</a>
+                        <a href="public/projects.html" class="btn btn-secondary">Ver proyectos</a>
+                    </div>
+                    <p class="hero-note">
+                        En construcción permanente. Las piezas cambian, el laboratorio permanece.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Quick Links Section -->
-  <section class="section" style="background: var(--secondary-bg); padding: 4rem 0;">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 3rem;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Áreas de Interés</h2>
-        <p style="color: var(--gray-400); font-size: 1.1rem;">Explora los diferentes aspectos de mi trabajo</p>
-      </div>
-      
-      <div class="projects-grid">
-        <div class="card">
-          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔬</div>
-          <h3 class="card-header">Laboratorio Casero</h3>
-          <p class="card-body">
-            Experimentación con hardware, servidores, y arquitecturas de red.
-            Construcción y prueba de prototipos tecnológicos.
-          </p>
-        </div>
-        
-        <div class="card">
-          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌐</div>
-          <h3 class="card-header">Redes & Infraestructura</h3>
-          <p class="card-body">
-            Diseño e implementación de soluciones de red avanzadas.
-            Seguridad, monitorización y optimización de infraestructuras.
-          </p>
-        </div>
-        
-        <div class="card">
-          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💻</div>
-          <h3 class="card-header">Software a Medida</h3>
-          <p class="card-body">
-            Desarrollo de aplicaciones personalizadas y herramientas especializadas.
-            Automatización y soluciones tecnológicas innovadoras.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- ÁREAS DE INTERÉS -->
+        <section class="section section-areas">
+            <div class="container">
+                <h2>Áreas de interés</h2>
+                <p class="section-intro">
+                    No es un perfil único, sino varias capas superpuestas. Aquí están algunas de las más visibles.
+                </p>
 
-  <!-- Call to Action -->
-  <section class="section" style="background: var(--primary-bg); text-align: center;">
-    <div class="container">
-      <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">¿Quieres saber más?</h2>
-      <p style="color: var(--gray-400); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Descubre mi trayectoria, proyectos y cómo puedes ponerte en contacto conmigo.
-      </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/public/about.html" class="btn btn-primary">Sobre Mí</a>
-        <a href="/public/contact.html" class="btn btn-secondary">Contactar</a>
-      </div>
-    </div>
-  </section>
+                <div class="cards-grid">
+                    <!-- Tecnología / Homelab / Redes -->
+                    <article class="card">
+                        <h3>Tecnología, Homelab y Seguridad Digital</h3>
+                        <p>
+                            Diseño y despliegue de infraestructuras de red domésticas y profesionales,
+                            servidores, segmentación de redes, VPN, diagnóstico de sistemas y automatización.
+                            Especial interés en entender qué ocurre cuando algo falla y cómo protegerse
+                            sin paranoia, pero con rigor.
+                        </p>
+                    </article>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>DrYouu</h3>
-          <p style="color: var(--gray-400); margin-top: 0.5rem;">
-            Laboratorio de investigación y desarrollo tecnológico.
-          </p>
-          <div class="social-links">
-            <a href="https://github.com/DrYouu-Research-Lab" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-              <span>GH</span>
-            </a>
-            <a href="mailto:yferreiro@gmail.com" class="social-link" title="Email">
-              <span>✉</span>
-            </a>
-          </div>
-        </div>
-        
-        <div class="footer-section">
-          <h3>Navegación</h3>
-          <ul class="footer-links">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/public/about.html">Sobre Mí</a></li>
-            <li><a href="/public/projects.html">Proyectos</a></li>
-            <li><a href="/public/contact.html">Contacto</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h3>Recursos</h3>
-          <ul class="footer-links">
-            <li><a href="/docs/README.html">Documentación</a></li>
-            <li><a href="/public/login.html">Acceso Privado</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; 2024 DrYouu. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
+                    <!-- Automoción -->
+                    <article class="card">
+                        <h3>Automoción y Mecánica Aplicada</h3>
+                        <p>
+                            Mantenimiento, diagnóstico y adaptación de vehículos, integrando electrónica y
+                            sensórica sobre bases mecánicas clásicas. Desde sistemas eléctricos y audio
+                            hasta proyectos más profundos de instrumentación, diagnóstico y confort.
+                        </p>
+                    </article>
 
-  <!-- JavaScript -->
-  <script src="/assets/js/main.js"></script>
+                    <!-- Tanatopraxia -->
+                    <article class="card">
+                        <h3>Tanatopraxia, duelo y cuidado</h3>
+                        <p>
+                            Trabajo técnico y humano en el ámbito funerario: tanatopraxia, criterios éticos
+                            en el trato al cuerpo y a la familia, y exploración de cómo la tecnología puede
+                            integrarse en un contexto extremadamente sensible sin perder el foco en las personas.
+                        </p>
+                    </article>
+
+                    <!-- Diseño / 3D / Fabricación -->
+                    <article class="card">
+                        <h3>Diseño, prototipado y fabricación digital</h3>
+                        <p>
+                            Modelado 3D, impresión y adaptación de piezas a medida, reparación creativa y
+                            construcción de soluciones físicas para problemas concretos. Desde piezas para
+                            electrónica y homelab hasta adaptaciones para vehículos y proyectos especiales.
+                        </p>
+                    </article>
+
+                    <!-- Investigación / Escritura -->
+                    <article class="card">
+                        <h3>Investigación personal y escritura</h3>
+                        <p>
+                            Documentación exhaustiva, escritura técnica y divulgativa, construcción de
+                            herramientas propias para entender mejor el entorno y dejar trazas claras
+                            de cada experimento. El laboratorio no es solo físico: también es mental.
+                        </p>
+                    </article>
+
+                    <!-- Meta / Sistema personal -->
+                    <article class="card">
+                        <h3>Sistemas personales y organización</h3>
+                        <p>
+                            Construcción de un ecosistema digital propio: control de versiones, automatización,
+                            dashboards, wikis personales y herramientas a medida para sostener todos los proyectos
+                            anteriores sin depender ciegamente de terceros.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE LLAMADA A LA ACCIÓN -->
+        <section class="section section-cta">
+            <div class="container">
+                <h2>¿Quieres saber más?</h2>
+                <p>
+                    Si algo de todo esto te resuena —ya sea por la parte técnica, la humana
+                    o la mezcla rara entre ambas— puedes profundizar un poco más.
+                </p>
+                <div class="cta-actions">
+                    <a href="public/about.html" class="btn btn-primary">Sobre mí</a>
+                    <a href="public/contact.html" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <div class="footer-brand">
+                <h3>DrYouu</h3>
+                <p>
+                    Laboratorio casero de investigación, reparación y experimentación transversal.
+                </p>
+                <p class="footer-meta">
+                    dryouu.uk · España
+                </p>
+            </div>
+
+            <div class="footer-block">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="public/about.html">Sobre Mí</a></li>
+                    <li><a href="public/projects.html">Proyectos</a></li>
+                    <li><a href="public/contact.html">Contacto</a></li>
+                    <li><a href="public/login.html">Acceso Privado</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-block">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="docs/README.md">Documentación</a></li>
+                    <li><a href="https://github.com/DrYouu-Research-Lab" target="_blank" rel="noopener noreferrer">GitHub · DrYouu-Research-Lab</a></li>
+                    <li><a href="mailto:yferreiro@gmail.com">Correo de contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2024–2025 DrYouu. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
