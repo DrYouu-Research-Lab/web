@@ -589,7 +589,7 @@ Failed to load config: site (404)
 ### Soporte
 
 ¿Necesitas ayuda?
-- 📧 Email: yferreiro@gmail.com
+- 📧 Email: lab@dryouu.uk
 - 🐛 Issues: https://github.com/DrYouu-Research-Lab/web/issues
 - 📚 Docs: `/docs/` directory
 
