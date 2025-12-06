@@ -1,0 +1,21 @@
+# Robots.txt - Control de indexación de motores de búsqueda
+# Para más información: https://developers.google.com/search/docs/crawling-indexing/robots/intro
+
+# Permitir a todos los robots indexar el sitio público
+User-agent: *
+Allow: /
+Allow: /public/
+Allow: /assets/
+
+# No indexar el área privada
+Disallow: /private/
+
+# No indexar archivos de configuración
+Disallow: /.git/
+Disallow: /.gitignore
+
+# Crawl-delay (opcional, algunos bots lo respetan)
+# Crawl-delay: 1
+
+# Sitemap (añade esto cuando tengas un sitemap)
+# Sitemap: https://tudominio.com/sitemap.xml
