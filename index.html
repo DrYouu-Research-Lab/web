@@ -1,125 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Meta Tags -->
   <meta charset="UTF-8">
-  <title>DrYouu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color-scheme: dark light;
-    }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #050816;
-      background: radial-gradient(circle at top, #1f2933 0, #020617 50%, #000 100%);
-      color: #e5e7eb;
-    }
-    .card {
-      max-width: 480px;
-      width: 90%;
-      padding: 2rem;
-      border-radius: 1.5rem;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      background: rgba(15, 23, 42, 0.9);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
-      backdrop-filter: blur(10px);
-    }
-    h1 {
-      margin: 0 0 0.25rem;
-      font-size: 1.9rem;
-      letter-spacing: 0.04em;
-    }
-    h2 {
-      margin: 0 0 1.25rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: #9ca3af;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-    }
-    p {
-      margin: 0 0 0.75rem;
-      line-height: 1.6;
-      font-size: 0.98rem;
-      color: #e5e7eb;
-    }
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      font-size: 0.75rem;
-      color: #cbd5f5;
-      margin-top: 0.75rem;
-    }
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 8px #22c55e;
-    }
-    .links {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-    .links a {
-      text-decoration: none;
-      font-size: 0.85rem;
-      padding: 0.5rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: #e5e7eb;
-      transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
-    }
-    .links a:hover {
-      background: rgba(148, 163, 184, 0.16);
-      border-color: #e5e7eb;
-      transform: translateY(-1px);
-    }
-    .footnote {
-      margin-top: 1.25rem;
-      font-size: 0.75rem;
-      color: #9ca3af;
-      opacity: 0.9;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DrYouu - Laboratorio casero, redes, hardware y software a medida. Investigación y desarrollo tecnológico.">
+  <meta name="keywords" content="DrYouu, tecnología, hardware, software, redes, laboratorio">
+  <meta name="author" content="Yoel Ferreiro Naya">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  
+  <!-- Title -->
+  <title>DrYouu - Laboratorio de Investigación y Desarrollo</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 </head>
 <body>
-  <main class="card">
-    <h2>DRYOUU.UK</h2>
-    <h1>Yoel Ferreiro Naya</h1>
-    <p>
-      Laboratorio casero, redes, hardware raro y software a medida.
-      Aquí irá todo lo que vaya construyendo poco a poco.
-    </p>
-    <p>
-      De momento esta es solo una tarjeta de visita muy sencilla,
-      publicada desde GitHub y servida con tu dominio en Cloudflare.
-    </p>
-
-    <div class="tag">
-      <span class="dot"></span>
-      <span>En construcción permanente</span>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/index.html" class="nav-brand">DRYOUU</a>
+      
+      <ul class="nav-menu">
+        <li><a href="/index.html" class="nav-link active">Inicio</a></li>
+        <li><a href="/public/about.html" class="nav-link">Sobre Mí</a></li>
+        <li><a href="/public/projects.html" class="nav-link">Proyectos</a></li>
+        <li><a href="/public/contact.html" class="nav-link">Contacto</a></li>
+        <li><a href="/public/login.html" class="nav-link btn-primary" style="padding: 0.5rem 1rem;">Acceso Privado</a></li>
+      </ul>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <div class="links">
-      <a href="mailto:yferreiro@gmail.com">Contacto</a>
-      <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="hero-subtitle">DRYOUU.UK</h2>
+      <h1 class="hero-title">Yoel Ferreiro Naya</h1>
+      <p class="hero-description">
+        Laboratorio casero de investigación y desarrollo. 
+        Explorando hardware, redes, software a medida y tecnologías emergentes.
+        Un espacio donde la curiosidad se encuentra con la innovación.
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="/public/about.html" class="btn btn-primary">Conoce Más</a>
+        <a href="/public/projects.html" class="btn btn-secondary">Ver Proyectos</a>
+      </div>
+      
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>En construcción permanente</span>
+      </div>
     </div>
+  </section>
 
-    <div class="footnote">
-      Puedes editar este archivo y subirlo de nuevo a GitHub cuando quieras.
+  <!-- Quick Links Section -->
+  <section class="section" style="background: var(--secondary-bg); padding: 4rem 0;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Áreas de Interés</h2>
+        <p style="color: var(--gray-400); font-size: 1.1rem;">Explora los diferentes aspectos de mi trabajo</p>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="card">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔬</div>
+          <h3 class="card-header">Laboratorio Casero</h3>
+          <p class="card-body">
+            Experimentación con hardware, servidores, y arquitecturas de red.
+            Construcción y prueba de prototipos tecnológicos.
+          </p>
+        </div>
+        
+        <div class="card">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌐</div>
+          <h3 class="card-header">Redes & Infraestructura</h3>
+          <p class="card-body">
+            Diseño e implementación de soluciones de red avanzadas.
+            Seguridad, monitorización y optimización de infraestructuras.
+          </p>
+        </div>
+        
+        <div class="card">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💻</div>
+          <h3 class="card-header">Software a Medida</h3>
+          <p class="card-body">
+            Desarrollo de aplicaciones personalizadas y herramientas especializadas.
+            Automatización y soluciones tecnológicas innovadoras.
+          </p>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section" style="background: var(--primary-bg); text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">¿Quieres saber más?</h2>
+      <p style="color: var(--gray-400); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Descubre mi trayectoria, proyectos y cómo puedes ponerte en contacto conmigo.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/public/about.html" class="btn btn-primary">Sobre Mí</a>
+        <a href="/public/contact.html" class="btn btn-secondary">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DrYouu</h3>
+          <p style="color: var(--gray-400); margin-top: 0.5rem;">
+            Laboratorio de investigación y desarrollo tecnológico.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/DrYouu-Research-Lab" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+              <span>GH</span>
+            </a>
+            <a href="mailto:yferreiro@gmail.com" class="social-link" title="Email">
+              <span>✉</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/public/about.html">Sobre Mí</a></li>
+            <li><a href="/public/projects.html">Proyectos</a></li>
+            <li><a href="/public/contact.html">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Recursos</h3>
+          <ul class="footer-links">
+            <li><a href="/docs/README.html">Documentación</a></li>
+            <li><a href="/public/login.html">Acceso Privado</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 DrYouu. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
