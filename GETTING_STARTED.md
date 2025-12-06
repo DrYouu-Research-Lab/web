@@ -215,7 +215,7 @@ El sistema de autenticación actual es **SOLO para demostración**. No es seguro
 
 1. 📖 Lee la [documentación completa](docs/)
 2. 🔍 Busca en los Issues de GitHub
-3. ✉️ Email: yferreiro@gmail.com
+3. ✉️ Email: lab@dryouu.uk
 4. 🐛 Reporta bugs en GitHub Issues
 
 ## 🎯 Checklist Final
@@ -250,7 +250,7 @@ Desarrollado con ❤️ por **DrYouu**
 
 - Website: [dryouu.uk](https://dryouu.uk)
 - GitHub: [@DrYouu-Research-Lab](https://github.com/DrYouu-Research-Lab)
-- Email: yferreiro@gmail.com
+- Email: lab@dryouu.uk
 
 ---
 

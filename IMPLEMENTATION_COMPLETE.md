@@ -346,7 +346,7 @@ less docs/SECURITY_CONFIG.md
 - 📝 [ARCHITECTURE_README.md](ARCHITECTURE_README.md) - Overview
 
 ### Contacto
-- 📧 Email: yferreiro@gmail.com
+- 📧 Email: lab@dryouu.uk
 - 🐛 Issues: GitHub Issues
 - 💬 Preguntas: GitHub Discussions
 

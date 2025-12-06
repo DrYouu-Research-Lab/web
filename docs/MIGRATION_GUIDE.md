@@ -336,7 +336,7 @@ git reset --hard HEAD~1  # Volver 1 commit atrás
    - Buscar errores rojos
 
 3. **Contacto:**
-   - 📧 Email: yferreiro@gmail.com
+   - 📧 Email: lab@dryouu.uk
    - 🐛 Issues: GitHub Issues
    - 📚 Docs: `/docs/` directory
 

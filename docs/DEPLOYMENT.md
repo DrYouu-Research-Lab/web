@@ -634,7 +634,7 @@ Después del deploy:
 1. Revisa esta guía completa
 2. Consulta la documentación de tu plataforma
 3. Abre un Issue en GitHub
-4. Contacta: yferreiro@gmail.com
+4. Contacta: lab@dryouu.uk
 
 ---
 

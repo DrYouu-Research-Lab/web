@@ -223,7 +223,7 @@ Solo debes:
 **Yoel Ferreiro Naya (DrYouu)**
 - Website: [dryouu.uk](https://dryouu.uk)
 - GitHub: [@DrYouu-Research-Lab](https://github.com/DrYouu-Research-Lab)
-- Email: yferreiro@gmail.com
+- Email: lab@dryouu.uk
 
 ## 🙏 Agradecimientos
 
@@ -237,7 +237,7 @@ Si tienes preguntas o necesitas ayuda:
 1. Revisa la [documentación completa](docs/)
 2. Busca en los [Issues](https://github.com/DrYouu-Research-Lab/web/issues) existentes
 3. Abre un nuevo Issue si no encuentras respuesta
-4. Contacta por [email](mailto:yferreiro@gmail.com)
+4. Contacta por [email](mailto:lab@dryouu.uk)
 
 ---
 

@@ -224,7 +224,7 @@ Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 - 🌐 Website: [dryouu.uk](https://dryouu.uk)
 - 💻 GitHub: [@DrYouu-Research-Lab](https://github.com/DrYouu-Research-Lab)
-- 📧 Email: yferreiro@gmail.com
+- 📧 Email: lab@dryouu.uk
 
 ## 🙏 Agradecimientos
 

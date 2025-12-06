@@ -655,7 +655,7 @@ logSecurityEvent('UNAUTHORIZED_ACCESS', { page: '/private/dashboard' });
 Si encuentras una vulnerabilidad de seguridad:
 
 1. **NO** abras un issue público
-2. Envía email a: yferreiro@gmail.com
+2. Envía email a: lab@dryouu.uk
 3. Incluye:
    - Descripción detallada
    - Pasos para reproducir
