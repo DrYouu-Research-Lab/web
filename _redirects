@@ -1,7 +1,0 @@
-# Redirect www to non-www (apex domain)
-https://www.dryouu.uk/* https://dryouu.uk/:splat 301
-
-# Redirect http to https (fallback if Cloudflare "Always Use HTTPS" is not enabled)
-# These rules can be removed if using Cloudflare's automatic HTTPS enforcement
-http://dryouu.uk/* https://dryouu.uk/:splat 301
-http://www.dryouu.uk/* https://dryouu.uk/:splat 301
