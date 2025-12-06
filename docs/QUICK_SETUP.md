@@ -298,7 +298,7 @@ Habilita GitHub Pages en Settings → Pages
 
 ## Soporte
 
-- 📧 Email: yferreiro@gmail.com
+- 📧 Email: lab@dryouu.uk
 - 🐛 Issues: https://github.com/DrYouu-Research-Lab/web/issues
 
 ---

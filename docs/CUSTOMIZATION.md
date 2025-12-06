@@ -54,7 +54,7 @@ Esta guía te enseñará cómo personalizar tu sitio web paso a paso, incluso si
 #### Información de Contacto (public/contact.html)
 
 1. Abre `public/contact.html`
-2. Busca todos los `mailto:yferreiro@gmail.com`
+2. Busca todos los `mailto:lab@dryouu.uk`
 3. Reemplaza con tu email:
    ```html
    <a href="mailto:tuemail@ejemplo.com">
@@ -71,7 +71,7 @@ En **todos los archivos HTML**, busca y reemplaza:
 <a href="https://github.com/tu-usuario">
 
 <!-- Email -->
-<a href="mailto:yferreiro@gmail.com">
+<a href="mailto:lab@dryouu.uk">
 <!-- Reemplaza con tu email -->
 <a href="mailto:tuemail@ejemplo.com">
 ```
@@ -485,7 +485,7 @@ Si algo no funciona o tienes dudas:
 1. Revisa esta guía completa
 2. Consulta la [documentación de estructura](STRUCTURE.md)
 3. Abre un Issue en GitHub
-4. Contacta por email: yferreiro@gmail.com
+4. Contacta por email: lab@dryouu.uk
 
 ---
 
