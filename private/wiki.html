@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wiki Personal - DrYouu">
+  <meta name="author" content="Yoel Ferreiro Naya">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  
+  <!-- Title -->
+  <title>Wiki Personal - DrYouu</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" style="background: rgba(17, 24, 39, 0.95);">
+    <div class="container nav-container">
+      <a href="/private/dashboard.html" class="nav-brand">DRYOUU <span style="font-size: 0.7rem; color: var(--private-accent);">PRIVADO</span></a>
+      
+      <ul class="nav-menu">
+        <li><a href="/private/dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="/private/wiki.html" class="nav-link active">Wiki</a></li>
+        <li><a href="/private/links.html" class="nav-link">Enlaces</a></li>
+        <li><a href="/index.html" class="nav-link">Área Pública</a></li>
+        <li><a href="#" class="logout-btn btn btn-danger" style="padding: 0.5rem 1rem;">Cerrar Sesión</a></li>
+      </ul>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Wiki Container -->
+  <div class="wiki-container">
+    <div class="wiki-layout">
+      <!-- Sidebar Navigation -->
+      <aside class="wiki-sidebar">
+        <h3 class="wiki-nav-title">Contenidos</h3>
+        <nav>
+          <ul class="wiki-nav-list">
+            <li class="wiki-nav-item">
+              <a href="#" class="wiki-nav-link active" data-article="getting-started">Primeros Pasos</a>
+            </li>
+            <li class="wiki-nav-item">
+              <a href="#" class="wiki-nav-link" data-article="technical-docs">Documentación Técnica</a>
+            </li>
+            <li class="wiki-nav-item">
+              <a href="#" class="wiki-nav-link" data-article="projects-notes">Notas de Proyectos</a>
+            </li>
+            <li class="wiki-nav-item">
+              <a href="#" class="wiki-nav-link" data-article="learning-resources">Recursos de Aprendizaje</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--wiki-border);">
+          <h3 class="wiki-nav-title">Acciones</h3>
+          <a href="/private/dashboard.html" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.5rem;">
+            ← Dashboard
+          </a>
+        </div>
+      </aside>
+      
+      <!-- Main Content -->
+      <main class="wiki-content">
+        <article>
+          <h1 id="wikiArticleTitle" class="wiki-article-title">Primeros Pasos</h1>
+          <div id="wikiArticleContent" class="wiki-article-content">
+            <!-- Content will be loaded dynamically by JavaScript -->
+          </div>
+        </article>
+        
+        <!-- How to Edit Section -->
+        <div style="margin-top: 3rem; padding: 1.5rem; background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 0.75rem;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--wiki-accent);">📝 Cómo Editar la Wiki</h3>
+          <p style="margin-bottom: 1rem; color: var(--wiki-text);">
+            Para añadir o modificar artículos en tu wiki personal:
+          </p>
+          <ol style="line-height: 1.8; color: var(--wiki-text); padding-left: 1.5rem;">
+            <li>Abre el archivo <code>assets/js/main.js</code></li>
+            <li>Busca el objeto <code>Wiki.articles</code> (aproximadamente en la línea 380)</li>
+            <li>Añade o modifica entradas siguiendo el formato existente:
+              <pre style="margin-top: 0.5rem;"><code>'article-id': {
+  title: 'Título del Artículo',
+  content: `&lt;h2&gt;Contenido&lt;/h2&gt;...`
+}</code></pre>
+            </li>
+            <li>Actualiza la navegación lateral en este archivo HTML añadiendo un nuevo enlace</li>
+            <li>Guarda los cambios y recarga la página</li>
+          </ol>
+          <p style="margin-top: 1rem; color: var(--wiki-text-light); font-size: 0.9rem;">
+            💡 <strong>Consejo:</strong> Usa HTML en el campo <code>content</code> para formatear tu texto con títulos, listas, enlaces y código.
+          </p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Protect this page - redirect to login if not authenticated
+    window.DrYouu.Auth.protectPage();
+  </script>
+</body>
+</html>

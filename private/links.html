@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enlaces Privados - DrYouu">
+  <meta name="author" content="Yoel Ferreiro Naya">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  
+  <!-- Title -->
+  <title>Enlaces Privados - DrYouu</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" style="background: rgba(17, 24, 39, 0.95);">
+    <div class="container nav-container">
+      <a href="/private/dashboard.html" class="nav-brand">DRYOUU <span style="font-size: 0.7rem; color: var(--private-accent);">PRIVADO</span></a>
+      
+      <ul class="nav-menu">
+        <li><a href="/private/dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="/private/wiki.html" class="nav-link">Wiki</a></li>
+        <li><a href="/private/links.html" class="nav-link active">Enlaces</a></li>
+        <li><a href="/index.html" class="nav-link">Área Pública</a></li>
+        <li><a href="#" class="logout-btn btn btn-danger" style="padding: 0.5rem 1rem;">Cerrar Sesión</a></li>
+      </ul>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Links Section -->
+  <main class="dashboard">
+    <div class="dashboard-header">
+      <div class="container">
+        <h1 class="dashboard-title">Enlaces Privados</h1>
+        <p style="color: var(--gray-400); font-size: 1.1rem;">
+          Accesos rápidos a tus servicios y herramientas privadas
+        </p>
+      </div>
+    </div>
+    
+    <div class="container" style="padding: 2rem 0;">
+      <!-- Infrastructure Services -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--private-text);">🖥️ Infraestructura</h2>
+        <div class="dashboard-grid">
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">📊</div>
+            <h3 class="dashboard-card-title">Proxmox VE</h3>
+            <p class="dashboard-card-description">
+              Panel de administración de virtualización
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://proxmox.local:8006
+            </div>
+          </a>
+          
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">📈</div>
+            <h3 class="dashboard-card-title">Grafana</h3>
+            <p class="dashboard-card-description">
+              Dashboards de monitorización y métricas
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://grafana.local:3000
+            </div>
+          </a>
+          
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">🔍</div>
+            <h3 class="dashboard-card-title">Portainer</h3>
+            <p class="dashboard-card-description">
+              Gestión de contenedores Docker
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://portainer.local:9443
+            </div>
+          </a>
+          
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">🌐</div>
+            <h3 class="dashboard-card-title">pfSense</h3>
+            <p class="dashboard-card-description">
+              Router y Firewall
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://pfsense.local
+            </div>
+          </a>
+        </div>
+      </section>
+      
+      <!-- Storage & Backup -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--private-text);">💾 Almacenamiento & Backups</h2>
+        <div class="dashboard-grid">
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">📁</div>
+            <h3 class="dashboard-card-title">Nextcloud</h3>
+            <p class="dashboard-card-description">
+              Almacenamiento en la nube personal
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://cloud.local
+            </div>
+          </a>
+          
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">💿</div>
+            <h3 class="dashboard-card-title">TrueNAS</h3>
+            <p class="dashboard-card-description">
+              Sistema de almacenamiento en red (NAS)
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://truenas.local
+            </div>
+          </a>
+        </div>
+      </section>
+      
+      <!-- Media & Entertainment -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--private-text);">🎬 Media</h2>
+        <div class="dashboard-grid">
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">📺</div>
+            <h3 class="dashboard-card-title">Plex</h3>
+            <p class="dashboard-card-description">
+              Servidor multimedia
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://plex.local:32400
+            </div>
+          </a>
+          
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">🎵</div>
+            <h3 class="dashboard-card-title">Jellyfin</h3>
+            <p class="dashboard-card-description">
+              Alternativa open source a Plex
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://jellyfin.local:8096
+            </div>
+          </a>
+        </div>
+      </section>
+      
+      <!-- Home Automation -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--private-text);">🏠 Domótica</h2>
+        <div class="dashboard-grid">
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">🏡</div>
+            <h3 class="dashboard-card-title">Home Assistant</h3>
+            <p class="dashboard-card-description">
+              Control de domótica e IoT
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://homeassistant.local:8123
+            </div>
+          </a>
+          
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">💡</div>
+            <h3 class="dashboard-card-title">Node-RED</h3>
+            <p class="dashboard-card-description">
+              Automatización y flujos de trabajo
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://nodered.local:1880
+            </div>
+          </a>
+        </div>
+      </section>
+      
+      <!-- Development Tools -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--private-text);">⚙️ Desarrollo</h2>
+        <div class="dashboard-grid">
+          <a href="https://github.com/DrYouu-Research-Lab" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank" rel="noopener noreferrer">
+            <div class="dashboard-card-icon">🐙</div>
+            <h3 class="dashboard-card-title">GitHub</h3>
+            <p class="dashboard-card-description">
+              Repositorios y proyectos
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              github.com/DrYouu-Research-Lab
+            </div>
+          </a>
+          
+          <a href="#" class="dashboard-card" style="text-decoration: none; color: inherit;" target="_blank">
+            <div class="dashboard-card-icon">🔧</div>
+            <h3 class="dashboard-card-title">Gitea</h3>
+            <p class="dashboard-card-description">
+              Git autoalojado
+            </p>
+            <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600; font-size: 0.85rem;">
+              https://git.local:3000
+            </div>
+          </a>
+        </div>
+      </section>
+      
+      <!-- How to Customize -->
+      <div style="margin-top: 3rem; padding: 1.5rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 0.75rem;">
+        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--success);">🔧 Personaliza tus Enlaces</h3>
+        <p style="margin-bottom: 1rem; color: var(--private-text);">
+          Para añadir, modificar o eliminar enlaces:
+        </p>
+        <ol style="line-height: 1.8; color: var(--private-text); padding-left: 1.5rem;">
+          <li>Abre el archivo <code>private/links.html</code></li>
+          <li>Busca la sección que quieres modificar (Infraestructura, Almacenamiento, etc.)</li>
+          <li>Añade o modifica los bloques de enlaces siguiendo el formato existente</li>
+          <li>Actualiza las URLs con tus propios servicios</li>
+          <li>Guarda los cambios y recarga la página</li>
+        </ol>
+        <p style="margin-top: 1rem; color: var(--gray-400); font-size: 0.9rem;">
+          💡 <strong>Consejo:</strong> Usa iconos emoji para hacer los enlaces más visuales y fáciles de identificar.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" style="background: rgba(17, 24, 39, 0.95);">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2024 DrYouu - Área Privada. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Protect this page - redirect to login if not authenticated
+    window.DrYouu.Auth.protectPage();
+  </script>
+</body>
+</html>

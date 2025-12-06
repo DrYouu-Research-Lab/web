@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel de control privado - DrYouu">
+  <meta name="author" content="Yoel Ferreiro Naya">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  
+  <!-- Title -->
+  <title>Dashboard - DrYouu</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" style="background: rgba(17, 24, 39, 0.95);">
+    <div class="container nav-container">
+      <a href="/private/dashboard.html" class="nav-brand">DRYOUU <span style="font-size: 0.7rem; color: var(--private-accent);">PRIVADO</span></a>
+      
+      <ul class="nav-menu">
+        <li><a href="/private/dashboard.html" class="nav-link active">Dashboard</a></li>
+        <li><a href="/private/wiki.html" class="nav-link">Wiki</a></li>
+        <li><a href="/private/links.html" class="nav-link">Enlaces</a></li>
+        <li><a href="/index.html" class="nav-link">Área Pública</a></li>
+        <li><a href="#" class="logout-btn btn btn-danger" style="padding: 0.5rem 1rem;">Cerrar Sesión</a></li>
+      </ul>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Dashboard -->
+  <main class="dashboard">
+    <div class="dashboard-header">
+      <div class="container">
+        <h1 class="dashboard-title">Panel de Control</h1>
+        <p style="color: var(--gray-400); font-size: 1.1rem;">
+          Bienvenido a tu área privada. Accede a tus recursos y herramientas personales.
+        </p>
+      </div>
+    </div>
+    
+    <div class="container" style="padding: 2rem 0;">
+      <!-- Quick Access Cards -->
+      <div class="dashboard-grid">
+        <a href="/private/wiki.html" class="dashboard-card" style="text-decoration: none; color: inherit;">
+          <div class="dashboard-card-icon">📚</div>
+          <h3 class="dashboard-card-title">Wiki Personal</h3>
+          <p class="dashboard-card-description">
+            Accede a tu base de conocimiento privada con artículos, tutoriales y notas.
+          </p>
+          <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600;">
+            Abrir Wiki →
+          </div>
+        </a>
+        
+        <a href="/private/links.html" class="dashboard-card" style="text-decoration: none; color: inherit;">
+          <div class="dashboard-card-icon">🔗</div>
+          <h3 class="dashboard-card-title">Enlaces Privados</h3>
+          <p class="dashboard-card-description">
+            Gestiona tus enlaces privados a servicios y herramientas importantes.
+          </p>
+          <div style="margin-top: 1rem; color: var(--private-accent); font-weight: 600;">
+            Ver Enlaces →
+          </div>
+        </a>
+        
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">⚙️</div>
+          <h3 class="dashboard-card-title">Configuración</h3>
+          <p class="dashboard-card-description">
+            Personaliza tu experiencia y configura tus preferencias.
+          </p>
+          <div style="margin-top: 1rem; color: var(--gray-500); font-weight: 600;">
+            Próximamente
+          </div>
+        </div>
+        
+        <div class="dashboard-card">
+          <div class="dashboard-card-icon">📊</div>
+          <h3 class="dashboard-card-title">Estadísticas</h3>
+          <p class="dashboard-card-description">
+            Visualiza estadísticas y métricas de tus proyectos y servicios.
+          </p>
+          <div style="margin-top: 1rem; color: var(--gray-500); font-weight: 600;">
+            Próximamente
+          </div>
+        </div>
+      </div>
+      
+      <!-- Recent Activity Section -->
+      <div style="margin-top: 3rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--private-text);">Actividad Reciente</h2>
+        <div class="card" style="background: var(--private-bg-light);">
+          <div class="card-body">
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid rgba(148, 163, 184, 0.1);">
+              <div style="font-size: 1.5rem;">📝</div>
+              <div style="flex: 1;">
+                <h4 style="color: var(--private-text); margin-bottom: 0.25rem;">Wiki actualizada</h4>
+                <p style="color: var(--gray-400); font-size: 0.9rem; margin: 0;">Se añadió documentación técnica nueva</p>
+              </div>
+              <div style="color: var(--gray-500); font-size: 0.85rem;">Hoy</div>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid rgba(148, 163, 184, 0.1);">
+              <div style="font-size: 1.5rem;">🔐</div>
+              <div style="flex: 1;">
+                <h4 style="color: var(--private-text); margin-bottom: 0.25rem;">Inicio de sesión exitoso</h4>
+                <p style="color: var(--gray-400); font-size: 0.9rem; margin: 0;">Acceso desde tu ubicación habitual</p>
+              </div>
+              <div style="color: var(--gray-500); font-size: 0.85rem;">Hace 5 min</div>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem 0;">
+              <div style="font-size: 1.5rem;">🔗</div>
+              <div style="flex: 1;">
+                <h4 style="color: var(--private-text); margin-bottom: 0.25rem;">Nuevo enlace añadido</h4>
+                <p style="color: var(--gray-400); font-size: 0.9rem; margin: 0;">Se agregó un enlace al dashboard</p>
+              </div>
+              <div style="color: var(--gray-500); font-size: 0.85rem;">Ayer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quick Stats -->
+      <div style="margin-top: 3rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--private-text);">Estadísticas Rápidas</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+          <div class="card" style="background: var(--private-bg-light); text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--private-accent); font-weight: 700;">4</div>
+            <p style="color: var(--gray-400); margin-top: 0.5rem;">Artículos en Wiki</p>
+          </div>
+          
+          <div class="card" style="background: var(--private-bg-light); text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--private-accent); font-weight: 700;">12</div>
+            <p style="color: var(--gray-400); margin-top: 0.5rem;">Enlaces Guardados</p>
+          </div>
+          
+          <div class="card" style="background: var(--private-bg-light); text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--private-accent); font-weight: 700;">24h</div>
+            <p style="color: var(--gray-400); margin-top: 0.5rem;">Sesión Activa</p>
+          </div>
+          
+          <div class="card" style="background: var(--private-bg-light); text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--success); font-weight: 700;">✓</div>
+            <p style="color: var(--gray-400); margin-top: 0.5rem;">Todo Funciona</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" style="background: rgba(17, 24, 39, 0.95);">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2024 DrYouu - Área Privada. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Protect this page - redirect to login if not authenticated
+    window.DrYouu.Auth.protectPage();
+  </script>
+</body>
+</html>

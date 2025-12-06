@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acceso al área privada de DrYouu">
+  <meta name="author" content="Yoel Ferreiro Naya">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  
+  <!-- Title -->
+  <title>Acceso Privado - DrYouu</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/index.html" class="nav-brand">DRYOUU</a>
+      
+      <ul class="nav-menu">
+        <li><a href="/index.html" class="nav-link">Inicio</a></li>
+        <li><a href="/public/about.html" class="nav-link">Sobre Mí</a></li>
+        <li><a href="/public/projects.html" class="nav-link">Proyectos</a></li>
+        <li><a href="/public/contact.html" class="nav-link">Contacto</a></li>
+      </ul>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🔐</div>
+        <h1 class="login-title">Área Privada</h1>
+        <p class="login-subtitle">Inicia sesión para acceder al contenido privado</p>
+      </div>
+      
+      <!-- Error Message (hidden by default) -->
+      <div id="loginError" class="error-message hidden">
+        Usuario o contraseña incorrectos
+      </div>
+      
+      <!-- Login Form -->
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username" class="form-label">Usuario</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            class="form-input" 
+            placeholder="Introduce tu usuario"
+            required
+            autocomplete="username"
+          >
+        </div>
+        
+        <div class="form-group">
+          <label for="password" class="form-label">Contraseña</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            class="form-input" 
+            placeholder="Introduce tu contraseña"
+            required
+            autocomplete="current-password"
+          >
+        </div>
+        
+        <button type="submit" class="btn btn-success" style="width: 100%; margin-top: 1rem;">
+          Iniciar Sesión
+        </button>
+      </form>
+      
+      <!-- Security Notice -->
+      <div style="margin-top: 2rem; padding: 1rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 0.5rem;">
+        <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--info);">🔒 Nota de Seguridad</h4>
+        <p style="font-size: 0.85rem; color: var(--gray-400); line-height: 1.6; margin: 0;">
+          Este es un sistema de autenticación de demostración. En un entorno de producción,
+          se deben implementar medidas de seguridad adicionales como autenticación del lado
+          del servidor, HTTPS, y protección contra ataques de fuerza bruta.
+        </p>
+      </div>
+      
+      <!-- Help Text -->
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <p style="font-size: 0.9rem; color: var(--gray-400);">
+          ¿Olvidaste tu contraseña? 
+          <a href="/public/contact.html" style="color: var(--primary-accent);">Contacta con el administrador</a>
+        </p>
+        <p style="font-size: 0.9rem; color: var(--gray-400); margin-top: 0.5rem;">
+          <a href="/index.html" style="color: var(--gray-500);">← Volver al inicio</a>
+        </p>
+      </div>
+      
+      <!-- Demo Credentials Info -->
+      <div style="margin-top: 2rem; padding: 1rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 0.5rem;">
+        <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--success);">ℹ️ Credenciales de Demostración</h4>
+        <p style="font-size: 0.85rem; color: var(--gray-400); line-height: 1.6; margin: 0;">
+          Para fines de demostración, las credenciales predeterminadas son:<br>
+          <strong style="color: var(--primary-text);">Usuario:</strong> admin<br>
+          <strong style="color: var(--primary-text);">Contraseña:</strong> DrYouu2024!
+        </p>
+        <p style="font-size: 0.85rem; color: var(--warning); margin-top: 0.5rem; margin-bottom: 0;">
+          ⚠️ <strong>IMPORTANTE:</strong> Cambia estas credenciales en el archivo 
+          <code style="background: rgba(0,0,0,0.3); padding: 0.2em 0.4em; border-radius: 0.25rem;">assets/js/main.js</code>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
