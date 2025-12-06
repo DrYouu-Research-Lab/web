@@ -3,6 +3,24 @@
 
 > Sitio web profesional completo con área pública, sección privada con autenticación y wiki personal.
 
+---
+
+## 🆕 **NUEVA ARQUITECTURA DISPONIBLE** 🎉
+
+Este sitio ahora incluye una **arquitectura profesional mejorada** con:
+
+- 🏗️ **Sistema de Configuración JSON** - Cambia contenido sin tocar código
+- 🔐 **Autenticación Avanzada** - WebAuthn/Passkey + OAuth2 (Google, GitHub, Apple)
+- 📦 **Código Modular** - Estructura profesional y escalable
+- 📚 **Documentación Completa** - 60KB+ de guías
+
+**👉 [Ver ARCHITECTURE_README.md para la nueva arquitectura](ARCHITECTURE_README.md)**  
+**👉 [Quick Start (5 minutos)](docs/QUICK_SETUP.md)**
+
+La implementación original sigue funcionando. La nueva arquitectura es **opcional y compatible** con el sistema actual.
+
+---
+
 [![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/DrYouu-Research-Lab/web)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Made with](https://img.shields.io/badge/made%20with-❤️-red.svg)](https://github.com/DrYouu-Research-Lab)
