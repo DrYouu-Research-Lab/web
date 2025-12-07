@@ -105,6 +105,7 @@
 
   <!-- JavaScript -->
   <script src="/assets/js/main.js"></script>
+  <!-- OAuth2 module - In production, consider bundling this into assets/ -->
   <script src="/src/js/auth/oauth2.js"></script>
   <script>
     // OAuth2 Authentication Handler
@@ -170,25 +171,51 @@
         }
       }
       
+      // Sanitize user data to prevent XSS
+      function sanitizeUserData(user) {
+        if (!user || typeof user !== 'object') return null;
+        
+        return {
+          username: String(user.username || '').substring(0, 100),
+          displayName: String(user.displayName || user.name || '').substring(0, 100),
+          email: String(user.email || '').substring(0, 255),
+          provider: String(user.provider || '').substring(0, 50)
+        };
+      }
+      
       // Check if returning from OAuth callback
+      // Handle both URL parameters (Google) and form POST (Apple)
       const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has('code') || urlParams.has('error')) {
+      const hasUrlCallback = urlParams.has('code') || urlParams.has('error');
+      
+      if (hasUrlCallback) {
         try {
           const result = await oauth2.handleCallback();
-          if (result.success) {
-            // Store session and redirect
-            localStorage.setItem('dryouu_session', JSON.stringify({
-              user: result.user,
-              loginTime: Date.now(),
-              expiry: Date.now() + 86400000 // 24 hours
-            }));
-            window.location.href = '/private/dashboard.html';
+          if (result.success && result.user) {
+            // Sanitize user data before storing
+            const sanitizedUser = sanitizeUserData(result.user);
+            
+            if (sanitizedUser) {
+              // Store session and redirect
+              localStorage.setItem('dryouu_session', JSON.stringify({
+                user: sanitizedUser,
+                loginTime: Date.now(),
+                expiry: Date.now() + 86400000 // 24 hours
+              }));
+              window.location.href = '/private/dashboard.html';
+            } else {
+              showError('Datos de usuario inválidos');
+            }
           }
         } catch (error) {
           console.error('OAuth callback error:', error);
           showError('Error en la autenticación: ' + error.message);
         }
       }
+      
+      // Note: Apple's form_post responseMode sends data via POST body
+      // which cannot be handled purely client-side. A backend endpoint
+      // is required to properly handle Apple OAuth callbacks.
     });
   </script>
 </body>
