@@ -113,6 +113,34 @@
       // Initialize OAuth2
       const oauth2 = new OAuth2Auth();
       
+      // Helper function to set button loading state
+      function setButtonState(button, isLoading, provider) {
+        if (!button) return;
+        
+        button.disabled = isLoading;
+        
+        const icon = provider === 'google' ? '🔵' : '⚪';
+        const text = provider === 'google' ? 'Continuar con Google' : 'Continuar con Apple';
+        
+        if (isLoading) {
+          button.innerHTML = `<span class="oauth-icon">${icon}</span><span>Conectando...</span>`;
+        } else {
+          button.innerHTML = `<span class="oauth-icon">${icon}</span><span>${text}</span>`;
+        }
+      }
+      
+      // Helper function to handle OAuth button click
+      async function handleOAuthClick(provider, button) {
+        try {
+          setButtonState(button, true, provider);
+          await oauth2.authenticate(provider);
+        } catch (error) {
+          console.error(`${provider} auth error:`, error);
+          showError(`Error al conectar con ${provider === 'google' ? 'Google' : 'Apple'}: ${error.message}`);
+          setButtonState(button, false, provider);
+        }
+      }
+      
       // Load auth configuration
       try {
         const response = await fetch('/config/auth.json');
@@ -122,35 +150,13 @@
         // Setup Google login button
         const googleBtn = document.getElementById('googleLoginBtn');
         if (googleBtn) {
-          googleBtn.addEventListener('click', async () => {
-            try {
-              googleBtn.disabled = true;
-              googleBtn.innerHTML = '<span class="oauth-icon">🔵</span><span>Conectando...</span>';
-              await oauth2.authenticate('google');
-            } catch (error) {
-              console.error('Google auth error:', error);
-              showError('Error al conectar con Google: ' + error.message);
-              googleBtn.disabled = false;
-              googleBtn.innerHTML = '<span class="oauth-icon">🔵</span><span>Continuar con Google</span>';
-            }
-          });
+          googleBtn.addEventListener('click', () => handleOAuthClick('google', googleBtn));
         }
         
         // Setup Apple login button
         const appleBtn = document.getElementById('appleLoginBtn');
         if (appleBtn) {
-          appleBtn.addEventListener('click', async () => {
-            try {
-              appleBtn.disabled = true;
-              appleBtn.innerHTML = '<span class="oauth-icon">⚪</span><span>Conectando...</span>';
-              await oauth2.authenticate('apple');
-            } catch (error) {
-              console.error('Apple auth error:', error);
-              showError('Error al conectar con Apple: ' + error.message);
-              appleBtn.disabled = false;
-              appleBtn.innerHTML = '<span class="oauth-icon">⚪</span><span>Continuar con Apple</span>';
-            }
-          });
+          appleBtn.addEventListener('click', () => handleOAuthClick('apple', appleBtn));
         }
         
       } catch (error) {
@@ -171,15 +177,35 @@
         }
       }
       
+      // HTML entity encoder
+      function htmlEncode(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+      }
+      
+      // Email validation
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+      
       // Sanitize user data to prevent XSS
       function sanitizeUserData(user) {
         if (!user || typeof user !== 'object') return null;
         
+        const email = String(user.email || '').substring(0, 255);
+        
+        // Validate email format if present
+        if (email && !isValidEmail(email)) {
+          console.warn('Invalid email format received from OAuth provider');
+        }
+        
         return {
-          username: String(user.username || '').substring(0, 100),
-          displayName: String(user.displayName || user.name || '').substring(0, 100),
-          email: String(user.email || '').substring(0, 255),
-          provider: String(user.provider || '').substring(0, 50)
+          username: htmlEncode(String(user.username || '').substring(0, 100)),
+          displayName: htmlEncode(String(user.displayName || user.name || '').substring(0, 100)),
+          email: htmlEncode(email),
+          provider: htmlEncode(String(user.provider || '').substring(0, 50))
         };
       }
       
