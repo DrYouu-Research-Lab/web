@@ -20,9 +20,9 @@ const CONFIG = {
   // Authentication - CHANGE THESE VALUES FOR YOUR SECURITY
   // In production, use server-side authentication
   AUTH: {
-    // Demo credentials - CHANGE THESE!
-    username: 'admin',
-    password: 'DrYouu2024!', // CHANGE THIS PASSWORD!
+    // Demo credentials - CHANGE THESE BEFORE PRODUCTION!
+    username: 'CHANGE_ME_BEFORE_PRODUCTION',
+    password: 'CHANGE_ME_BEFORE_PRODUCTION', // CHANGE THIS PASSWORD!
     sessionKey: 'dryouu_session',
     tokenExpiry: 24 * 60 * 60 * 1000 // 24 hours
   },

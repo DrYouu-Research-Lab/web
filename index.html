@@ -9,42 +9,46 @@
 </head>
 <body>
     <!-- CABECERA / NAVEGACIÓN -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">DRYOUU</a>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="public/about.html">Sobre Mí</a></li>
-                    <li><a href="public/projects.html">Proyectos</a></li>
-                    <li><a href="public/contact.html">Contacto</a></li>
-                    <li><a href="public/login.html">Acceso Privado</a></li>
-                </ul>
-            </nav>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">DRYOUU</a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="public/about.html" class="nav-link">Sobre Mí</a></li>
+                <li><a href="public/projects.html" class="nav-link">Proyectos</a></li>
+                <li><a href="public/contact.html" class="nav-link">Contacto</a></li>
+                <li><a href="public/login.html" class="nav-link btn-primary" style="padding: 0.5rem 1rem;">Acceso Privado</a></li>
+            </ul>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
+    </nav>
 
     <!-- HERO PRINCIPAL -->
     <main>
         <section class="hero">
             <div class="container">
-                <div class="hero-text">
-                    <p class="hero-kicker">DRYOUU.UK</p>
-                    <h1>Yoel Ferreiro Naya</h1>
-                    <p class="hero-subtitle">
+                <div class="hero-content">
+                    <p class="hero-subtitle">DRYOUU.UK</p>
+                    <h1 class="hero-title">Yoel Ferreiro Naya</h1>
+                    <p class="hero-description">
                         Laboratorio personal de investigación, creación y reparación.
                         Tecnología, tanatopraxia, automoción, fabricación digital, escritura
                         y proyectos que no encajan en una sola etiqueta.
                     </p>
-                    <div class="hero-actions">
+                    <div class="hero-buttons">
                         <a href="public/about.html" class="btn btn-primary">Conoce más</a>
                         <a href="public/projects.html" class="btn btn-secondary">Ver proyectos</a>
                     </div>
-                    <p class="hero-note">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
                         En construcción permanente. Las piezas cambian, el laboratorio permanece.
-                    </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -139,41 +143,43 @@
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="site-footer">
-        <div class="container footer-layout">
-            <div class="footer-brand">
-                <h3>DrYouu</h3>
-                <p>
-                    Laboratorio casero de investigación, reparación y experimentación transversal.
-                </p>
-                <p class="footer-meta">
-                    dryouu.uk · Galicia, España
-                </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DrYouu</h3>
+                    <p style="color: var(--gray-400); margin-top: 0.5rem;">
+                        Laboratorio casero de investigación, reparación y experimentación transversal.
+                    </p>
+                    <p style="color: var(--gray-500); margin-top: 0.5rem; font-size: 0.9rem;">
+                        dryouu.uk · Galicia, España
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="public/about.html">Sobre Mí</a></li>
+                        <li><a href="public/projects.html">Proyectos</a></li>
+                        <li><a href="public/contact.html">Contacto</a></li>
+                        <li><a href="public/login.html">Acceso Privado</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="docs/README.md">Documentación</a></li>
+                        <li><a href="https://github.com/DrYouu-Research-Lab" target="_blank" rel="noopener noreferrer">GitHub · DrYouu-Research-Lab</a></li>
+                        <li><a href="mailto:lab@dryouu.uk">Correo de contacto</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-block">
-                <h4>Navegación</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="public/about.html">Sobre Mí</a></li>
-                    <li><a href="public/projects.html">Proyectos</a></li>
-                    <li><a href="public/contact.html">Contacto</a></li>
-                    <li><a href="public/login.html">Acceso Privado</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>© 2024–2025 DrYouu. Todos los derechos reservados.</p>
             </div>
-
-            <div class="footer-block">
-                <h4>Recursos</h4>
-                <ul>
-                    <li><a href="docs/README.md">Documentación</a></li>
-                    <li><a href="https://github.com/DrYouu-Research-Lab" target="_blank" rel="noopener noreferrer">GitHub · DrYouu-Research-Lab</a></li>
-                    <li><a href="mailto:lab@dryouu.uk">Correo de contacto</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container footer-bottom">
-            <p>© 2024–2025 DrYouu. Todos los derechos reservados.</p>
         </div>
     </footer>
 
